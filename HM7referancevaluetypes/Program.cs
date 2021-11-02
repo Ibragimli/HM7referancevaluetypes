@@ -48,10 +48,11 @@ namespace HM7referancevaluetypes
 
             string[] newStrArr = getStringArry(counter);
 
-
+            Console.WriteLine("-----------");
             foreach (var words in newStrArr)
             {
-                Console.WriteLine($"Cavab:{words}");
+                
+                Console.WriteLine($":{words}");
             }
 
             

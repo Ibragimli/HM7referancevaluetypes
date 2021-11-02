@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HM7referancevaluetypes", "HM7referancevaluetypes\HM7referancevaluetypes.csproj", "{31AB2DEC-92A1-45B2-BA02-99585EC893AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31AB2DEC-92A1-45B2-BA02-99585EC893AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AB2DEC-92A1-45B2-BA02-99585EC893AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AB2DEC-92A1-45B2-BA02-99585EC893AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AB2DEC-92A1-45B2-BA02-99585EC893AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C956765A-9CBA-4BC2-8638-E6460B88AE30}
+	EndGlobalSection
+EndGlobal

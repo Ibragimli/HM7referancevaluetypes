@@ -11,9 +11,9 @@ namespace HM7referancevaluetypes
             //deyerini deyisidib "salam, Dunya" vezyetine salmalidir.Yəni göndırilən string-de sözlər arasında birdən
             //çox boşluq ola bilər, onu hər söz arasında bir boşluq olan vezyete salan metod yazırsınız.Metod geriyə dəyər qaytarmır!
 
-            //Console.WriteLine("1)String deyerini girin:");
-            //string text = Console.ReadLine();
-            //spaceOne(text);
+            Console.WriteLine("1)String deyerini girin:");
+            string text = Console.ReadLine();
+            spaceOne(text);
 
 
 
@@ -22,39 +22,35 @@ namespace HM7referancevaluetypes
             //-icinde en az 1 boyuk herf olmalidir
             //- icinde en az 1 kicik herf olmalidir
 
-            //Console.WriteLine("2)String bir deyer daxil edin:");
-            //Console.WriteLine($"Cavab-{checkDUL(Console.ReadLine())}");
+            Console.WriteLine("2)String bir deyer daxil edin:");
+            Console.WriteLine($"Cavab-{checkDUL(Console.ReadLine())}");
 
             //3. Parameter olaraq integer array variable-i (reference) ve bir integer value qebul eden ve
             //hemin integer value-nu integer array-e yeni element kimi elave eden metod.
-            //Console.WriteLine("3)Value daxil edin:");
-            //int[] intArry = new int[] { 1, 2, 3, 4, 5, 6, 7 };
-            //string numberstr = Console.ReadLine();
-            //int number = Convert.ToInt32(numberstr);
+            
+            Console.WriteLine("3)Value daxil edin:");
+            int[] intArry = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+            string numberstr = Console.ReadLine();
+            int number = Convert.ToInt32(numberstr);
 
-            //int [] arry = returnNewArry(ref intArry,number);
-            //foreach (var num in arry)
-            //{
-            //    Console.WriteLine(num);
-            //}
-
-            //4.Gonderilmis string deyerinideki sözlərdən ibaret array qaytaran metod 
-            string word;
-
-            string[] newstrArr = new string[0];
-            string[] newStrArr = new string[0];
-            do
+            int[] arry = returnNewArry(ref intArry, number);
+            foreach (var num in arry)
             {
-                Console.WriteLine("Stringi daxil edin: (Cixmaq ucun q-ya basin)");
-                word = Console.ReadLine();
-                newStrArr = getStringArry(ref newstrArr, word);
-                
-            } while (word != "q" );
+                Console.WriteLine(num);
+            }
+
+            //4.Gonderilmis string deyerindeki sözlərdən ibaret array qaytaran metod 
+
+            Console.WriteLine("Nece defe string deyeri gireceyinizi qeyd edin: (Mes:2)");
+            string counterStr = Console.ReadLine();
+            int counter = Convert.ToInt32(counterStr);
+
+            string[] newStrArr = getStringArry(counter);
 
 
-            foreach (var words in  newStrArr)
+            foreach (var words in newStrArr)
             {
-                Console.WriteLine($" Array-{word}");
+                Console.Write($"{words} ");
             }
         }
 
@@ -109,19 +105,24 @@ namespace HM7referancevaluetypes
             int[] newIntArry = intArry;
             Array.Resize(ref newIntArry, intArry.Length + 1);
             newIntArry[newIntArry.Length - 1] = number;
-            
+
             return newIntArry;
         }
 
-        static string [] getStringArry(ref string[] intArry, string word)
+        static string[] getStringArry(int counter)
         {
-            string [] newStrArry = intArry;
-            Array.Resize(ref newStrArry, intArry.Length + 1);
-            newStrArry[newStrArry.Length - 1] = word;
-
+            string[] newStrArry = new string[0];
+            string word;
+            for (int i = 0; i < counter; i++)
+            {
+                Console.WriteLine("Stringi qeyd edin:");
+                word = Console.ReadLine();
+                Array.Resize(ref newStrArry, newStrArry.Length + 1);
+                newStrArry[newStrArry.Length - 1] = word;
+            }
             return newStrArry;
         }
 
-        
+
     }
 }

@@ -13,7 +13,8 @@ namespace HM7referancevaluetypes
 
             Console.WriteLine("1)String deyerini girin:");
             string text = Console.ReadLine();
-            spaceOne(text);
+            Console.WriteLine("--------");
+            spaceOne(text); 
 
 
 
@@ -27,7 +28,7 @@ namespace HM7referancevaluetypes
 
             //3. Parameter olaraq integer array variable-i (reference) ve bir integer value qebul eden ve
             //hemin integer value-nu integer array-e yeni element kimi elave eden metod.
-            
+
             Console.WriteLine("3)Value daxil edin:");
             int[] intArry = new int[] { 1, 2, 3, 4, 5, 6, 7 };
             string numberstr = Console.ReadLine();
@@ -41,7 +42,7 @@ namespace HM7referancevaluetypes
 
             //4.Gonderilmis string deyerindeki sözlərdən ibaret array qaytaran metod 
 
-            Console.WriteLine("Nece defe string deyeri gireceyinizi qeyd edin: (Mes:2)");
+            Console.WriteLine("4)Nece defe string deyeri gireceyinizi qeyd edin: (Mes:2)");
             string counterStr = Console.ReadLine();
             int counter = Convert.ToInt32(counterStr);
 
@@ -50,7 +51,22 @@ namespace HM7referancevaluetypes
 
             foreach (var words in newStrArr)
             {
-                Console.Write($"{words} ");
+                Console.WriteLine($"Cavab:{words}");
+            }
+
+            
+            //5.Göndərilmiş string dəyərindəki son sözlərdən ibarrət array qaytaran metod
+            
+            Console.WriteLine("5)Nece defe string deyeri gireceyinizi qeyd edin: (Mes:2)");
+            string counterStr1 = Console.ReadLine();
+            int counter1 = Convert.ToInt32(counterStr1);
+
+            string[] newStrArr1 = getLastStringArry(counter1);
+
+
+            foreach (var words1 in newStrArr1)
+            {
+                Console.Write($"{words1} ");
             }
         }
 
@@ -121,6 +137,21 @@ namespace HM7referancevaluetypes
                 newStrArry[newStrArry.Length - 1] = word;
             }
             return newStrArry;
+        }
+
+        static string[] getLastStringArry(int counter)
+        {
+            string[] newStrArry1 = new string[0];
+            string word;
+            for (int i = 0; i < counter; i++)
+            {
+                Console.WriteLine("Stringi qeyd edin:");
+                word = Console.ReadLine();
+                word = word.Trim().Substring(word.Trim().LastIndexOf(' ') + 1);
+                Array.Resize(ref newStrArry1, newStrArry1.Length + 1);
+                newStrArry1[newStrArry1.Length - 1] = word;
+            }
+            return newStrArry1;
         }
 
 
